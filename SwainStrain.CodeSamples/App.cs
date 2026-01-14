@@ -10,12 +10,13 @@ using System.Reflection;
 using System.Windows.Media.Imaging;
 using SwainStrain.CodeSamples.DockablePane;
 using SwainStrain.CodeSamples.PostableCommands;
+using SwainStrain.CodeSamples.FamilyTreeView;
 
 namespace SwainStrain.CodeSamples
 {
     public class App : IExternalApplication
     {
-        public Guid DockablePanelGuid => new Guid("{65B4FB52-EF30-4031-8D6D-CE08618336E7}");
+        public static Guid DockablePanelGuid => new Guid("{65B4FB52-EF30-4031-8D6D-CE08618336E7}");
 
         public Result OnStartup(UIControlledApplication application)
         {
@@ -33,6 +34,11 @@ namespace SwainStrain.CodeSamples
                 "WPF Theme Switcher",
                 "SwainStrain.CodeSamples.Resources.WPFThemeSwitcher_Icon.png", 
                 typeof(WPFThemeSwitcher_Availability).FullName);
+            AddPushButton(ribbonPanel, "DockablePane", "Dockable\nPane", assemblyPath,
+                typeof(DockablePane_Command).FullName,
+                "Dockable Pane",
+                "SwainStrain.CodeSamples.Resources.DockablePane_Icon.png",
+                typeof(DockablePane_Availability).FullName);
             AddPushButton(ribbonPanel, "TaskDialogMultipleOptions", "Task Dialog\nMultiple Options", assemblyPath,
                 typeof(TaskDialogMultipleOptions_Command).FullName,
                 "Task Dialog Multiple Options",
@@ -43,6 +49,11 @@ namespace SwainStrain.CodeSamples
                 "Postable Commands",
                 "SwainStrain.CodeSamples.Resources.PostableCommands_Icon.png", 
                 typeof(PostableCommands_Availability).FullName);
+            AddPushButton(ribbonPanel, "FamilyTreeView", "Family\nTreeView", assemblyPath,
+                typeof(FamilyTreeView_Command).FullName,
+                "Family Tree View",
+                "SwainStrain.CodeSamples.Resources.FamilyTreeView_Icon.png", 
+                typeof(FamilyTreeView_Availability).FullName);
 
             Assembly.LoadFrom(Path.Combine(
     Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),

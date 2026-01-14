@@ -1,0 +1,34 @@
+﻿<Window x:Class="SwainStrain.CodeSamples.FamilyTreeView.FamilyTreeView_View"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SwainStrain.CodeSamples.FamilyTreeView"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterOwner"
+        Title="Family Tree"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        UseLayoutRounding="True"
+        Height="500"
+        Width="350">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/SwainStrain.CodeSamples;component/Resources/ResourceDictionary_Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/SwainStrain.CodeSamples;component/Resources/ResourceDictionary_Common.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+
+    <Grid Margin="10">
+        <TreeView x:Name="Tree" />
+    </Grid>
+</Window>
