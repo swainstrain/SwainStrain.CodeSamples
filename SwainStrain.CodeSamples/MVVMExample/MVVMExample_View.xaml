@@ -1,0 +1,32 @@
+﻿<Window x:Class="SwainStrain.CodeSamples.MVVMExample.MVVMExample_View"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Minimal MVVM Window"
+        Height="300"
+        Width="300"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/SwainStrain.CodeSamples;component/Resources/ResourceDictionary_Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/SwainStrain.CodeSamples;component/Resources/ResourceDictionary_Common.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Button Content="Load Elements"
+                Height="30"
+                Click="Button_Click"
+                Grid.Row="0" />
+
+        <ListBox ItemsSource="{Binding Elements}"
+                 Grid.Row="1" />
+    </Grid>
+</Window>

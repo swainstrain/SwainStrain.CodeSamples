@@ -57,6 +57,7 @@
     <ItemGroup>
       <None Remove="Resources\DockablePane_Icon.png" />
       <None Remove="Resources\FamilyTreeView_Icon.png" />
+      <None Remove="Resources\MVVMExample_Icon.png" />
       <None Remove="Resources\PostableCommands_Icon.png" />
       <None Remove="Resources\TaskDialogMultipleOptions_Icon.png" />
       <None Remove="Resources\WPFThemeSwitcher_Icon.png" />
@@ -84,6 +85,7 @@
     <ItemGroup>
       <EmbeddedResource Include="Resources\DockablePane_Icon.png" />
       <EmbeddedResource Include="Resources\FamilyTreeView_Icon.png" />
+      <EmbeddedResource Include="Resources\MVVMExample_Icon.png" />
       <EmbeddedResource Include="Resources\PostableCommands_Icon.png" />
       <EmbeddedResource Include="Resources\TaskDialogMultipleOptions_Icon.png" />
       <EmbeddedResource Include="Resources\WPFThemeSwitcher_Icon.png" />

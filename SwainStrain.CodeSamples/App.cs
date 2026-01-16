@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using SwainStrain.CodeSamples.DockablePane;
 using SwainStrain.CodeSamples.PostableCommands;
 using SwainStrain.CodeSamples.FamilyTreeView;
+using SwainStrain.CodeSamples.MVVMExample;
 
 namespace SwainStrain.CodeSamples
 {
@@ -54,6 +55,11 @@ namespace SwainStrain.CodeSamples
                 "Family Tree View",
                 "SwainStrain.CodeSamples.Resources.FamilyTreeView_Icon.png", 
                 typeof(FamilyTreeView_Availability).FullName);
+            AddPushButton(ribbonPanel, "MVVMExample", "MVVM\nExample", assemblyPath,
+                typeof(MVVMExample_Command).FullName,
+                "MVVM Example",
+                "SwainStrain.CodeSamples.Resources.MVVMExample_Icon.png", 
+                typeof(MVVMExample_Availability).FullName);
 
             Assembly.LoadFrom(Path.Combine(
     Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
