@@ -18,7 +18,7 @@ namespace SwainStrain.CodeSamples.MVVMExample
                 DataContext = viewModel
             };
 
-            window.ShowDialog();
+            window.Show();
             return Result.Succeeded;
         }
     }
